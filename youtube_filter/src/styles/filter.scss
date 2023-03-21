@@ -1,0 +1,74 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+
+        &--btn {
+            border: none;
+            padding: .5rem;
+            width: 100px;
+            background-color: #aeaeae;
+            color: #444;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .4s;
+
+            &:hover {
+                color: #fff;
+                background-color: #555;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-self: center;
+        gap: 1rem 3rem;
+    }
+}
+
+.active {
+    color: #fff;
+    background-color: #555;
+}
+
+h1 {
+    border: 1px solid #444;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width:1095px) {
+    .filter {
+        &__list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width:897px) {
+    .filter {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width:681px) {
+    .filter {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

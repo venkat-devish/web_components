@@ -1,0 +1,15 @@
+.box {
+   border: 1px solid black;
+   padding: 1rem;
+   height: 50px;
+   width: 50px;
+   cursor: pointer;
+
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+   }
+
+
+}
